@@ -1,0 +1,40 @@
+body
+  margin: 0
+  -webkit-backface-visibility: hidden
+    
+.wrapper
+  +outer-container
+  +pad(1em)
+  
+.wrapper-medium
+  +outer-container($medium-screen)
+  +pad(1em)
+  
+.wrapper-large
+  +outer-container($large-screen)
+  +pad(1em)
+
+.row
+  +outer-container
+  
+section
+  padding-bottom: $base-spacing*2
+  margin-bottom: $base-spacing*2
+  border-bottom: 1px solid transparentize($base-font-color, .9)
+    
+section
+  margin-bottom: 0    
+   
+section
+  padding-top: 3em
+  padding-bottom: 3em
+  
+  .section-title
+    margin-bottom: 1em
+    text-align: center
+
+
+
+
+
+

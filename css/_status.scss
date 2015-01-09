@@ -1,0 +1,27 @@
+// The CSS for the colored dot that represents your current status
+$red:#e74c3c;
+$orange:#e67e22;
+$yellow:#FFCD34;
+$green: #2fcc66;
+
+.color-dot {
+  border-radius: 99px;
+  display:inline-block;
+  width:10px;
+  height:10px;
+  margin-right:2px;
+  &.critical {
+    background-color:$red;
+  }
+  &.major {
+    background-color:$orange;
+  }
+  &.minor {
+    background-color:$yellow;
+  }
+  &.none {
+    background-color:$green;
+  }
+}
+
+

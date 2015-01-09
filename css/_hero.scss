@@ -1,0 +1,60 @@
+.hero {
+  $hero-background-top: #2C3648; 
+  $hero-background-bottom: #383E69;
+  $hero-color: white;
+  $gradient-angle: 10deg;
+  $hero-image: '../images/controlcenter.png';
+
+  @include background(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 4em;
+
+  .hero-logo img {
+    height: 3em;
+    margin-bottom: 2.5em;
+  }
+
+  .hero-inner {
+    @include outer-container($large-screen);
+    @include clearfix;
+    margin: auto;
+    text-align: center;
+    color: $hero-color;
+    padding: 1em;
+    
+    @include media($large-screen) {
+      padding: 6em 3em;
+    }
+    
+    .hero-copy {
+      text-align: center;
+      
+      h1 {
+        
+        font-weight: bold;
+        margin-bottom: .5em;
+
+        @include media($large-screen) {
+          font-size: 52px;
+          
+        }
+      }
+
+      p {
+        margin: auto;
+        margin-bottom: 3em; 
+        font-weight: 200;
+        line-height: 1.4em;
+        display: none;
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 40%;
+        }
+      }
+    }
+  }
+}
