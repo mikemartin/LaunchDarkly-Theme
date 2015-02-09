@@ -1,0 +1,9 @@
+<section class="container padding">
+  {{ theme:partial src="title" }}
+
+  <div class="cards">
+    {{ cards }}
+      {{ theme:partial src="card-listing" use_context="true" }}
+    {{ /cards }}
+  </div>
+</section>

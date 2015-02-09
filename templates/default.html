@@ -1,0 +1,35 @@
+<div class="light">
+ <div class="container padding">
+  <div class="main-content">
+	<div class="articles">
+    {{ entries:listing folder="blog" limit="3" }}
+	    {{ if no_results }}
+		  <p class="sorry">
+			No journal posts have been posted yet.<br>
+			Check back soon.
+		  </p>
+	    {{ else }}
+		  {{ theme:partial src="blog-listing" use_context="true" }}
+	    {{ endif }}
+	{{ /entries:listing }}
+	
+    </div>
+	{{ entries:pagination folder="blog" limit="3" }}
+	    {{ if next_page || previous_page }}
+		  <div class="pagination clearfix">
+			{{ if next_page }}
+			    <a href="{{ next_page }}" class="older">Older Posts</a>
+			{{ endif }}
+			{{ if previous_page }}
+			    <a href="{{ previous_page }}" class="newer">Newer Posts</a>
+			{{ endif }}
+		  </div>
+	    {{ endif }}
+	{{ /entries:pagination }}
+  </div>
+
+  <aside class="secondary-content" role="complementary">
+	{{ theme:partial src="blog-sidebar" }}
+  </aside>
+</div>
+</div>

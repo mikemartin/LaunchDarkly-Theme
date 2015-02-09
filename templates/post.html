@@ -1,0 +1,22 @@
+<div class="light">
+
+  <div class="container padding">
+
+	<div class="main-content">
+	   <a href="/blog" class="article-back icon-prev">View Posts</a>
+
+		<div class="article">
+		  <p class="date">
+		    {{ member:profile member="{ author }" }}{{ first_name }} {{ last_name }}{{/member:profile}} - {{ date }}
+          </p>
+          <h1>{{ title|smartypants|widont }}</h1>
+          {{ if image }}<img src="{{ image }}" class="article-image"/>{{ endif }}
+          {{ content }}
+		</div>
+	</div>
+	<aside class="secondary-content" role="complementary">
+		{{ theme:partial src="blog-sidebar" }}
+	</aside>
+</div>
+
+</div>

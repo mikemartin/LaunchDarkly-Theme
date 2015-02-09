@@ -1,0 +1,25 @@
+.button-primary 
+  background: $primary-button-color
+  &:hover 
+    background: $hover-primary-button-color
+
+.button-secondary
+  background: $secondary-button-color
+  color: $medium-gray
+  font-weight: normal
+  &:hover 
+    background: $hover-secondary-button-color
+  
+    
++media($medium-screen)
+  .button--large 
+    font-size: $h3-font-size
+    font-weight: 300
+  
++media($mobile)  
+  .button--large 
+    display: block
+    text-align: center
+    font-size: $h5-font-size
+    max-width: 320px
+    +margin(null auto)

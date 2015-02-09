@@ -1,0 +1,43 @@
+
+<div id="js-parallax-window" class="hero parallax-window reverse">
+  <div class="parallax-static-content container narrow">
+    <div class="section-title">
+      <h1>{{ hero_title|smartypants|widont }}</h1>
+      {{ if intro }}
+      <p class="lead">{{ intro }}</p>
+      {{ endif }}
+      
+      {{ theme:partial src="sign-up" }}
+      
+    </div>
+  </div>
+  <div id="js-parallax-background" class="parallax-background hero-background"></div>
+</div>
+
+
+
+{{ sections }}
+  {{ if type == "teaser_set" }}
+    {{ theme:partial src="teaser" use_context="true"}}
+  {{ elseif type == "customer_set" }}
+    <section class="testimonials highlight">
+      <div class="container padding">
+        {{ theme:partial src="title" use_context="true"}}
+        <div class="quotes">
+          {{ quotes }}
+            {{ theme:partial src="quote-listing" use_context="true"}}
+          {{ /quotes }}
+        </div>
+      </div>
+    </section>
+
+    <div class="customers">
+      <div class="container padding">
+        {{ logos }}
+          {{ theme:partial src="logo-listing" use_context="true"}}
+        {{ /logos }}
+      </div>
+    </div>
+
+  {{ endif }}
+{{ /sections }}

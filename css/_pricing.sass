@@ -1,0 +1,106 @@
+/* PRICING */
+.pricing-plans
+  +clearfix
+  text-align: center
+
+.plan
+  position: relative
+
+.plan-header
+  background: $dark-gray
+  margin: -$base-spacing
+  padding: $base-spacing
+  margin-bottom: $base-spacing
+  border-bottom: 1px solid $black
+  
+.plan-title, .plan-label
+  text-transform: uppercase
+  font-size: 14px
+  font-weight: bold
+  letter-spacing: .15em
+  color: $medium-gray   
+  
+.plan-title
+  margin-bottom: $base-spacing/2
+
+.plan-features li
+  margin-bottom: $base-spacing/2
+  line-height: 1.2
+  position: relative
+
+.plan-tooltip-item    
+  position: absolute
+  top: 0px
+  display: inline-block
+  line-height: 1
+  margin-left: 5px
+  
+  .icon-help
+    color: $gray
+    font-size: $base-font-size * .8
+
+    &:hover
+      color: $medium-gray
+     
+      
+.plan--highlight .plan-label
+  display: block
+    
+.plan-label
+  background: $purple
+  position: absolute
+  top: -$base-spacing
+  left: 0
+  width: 100%
+  color: $white
+  display: none
+    
+
+
++media($large-screen)
+  .pricing-plans
+    +outer-container
+    +row(table)
+    margin-top: $base-spacing*2
+    
+  .plan
+    +span-columns(4)
+    height: 458px
+    border-left: 1px solid $black
+    +reset-display
+    
++media(max-width $large-screen)
+  .plan--highlight
+    margin-top: $base-spacing*2
+    
+    
+      
+// PRICE
+.price
+  +outer-container
+  margin: 0 auto $base-spacing auto
+  
+  +media(max-width $large-screen)
+    max-width: 300px
+  
+.price-currency, .price-period
+  width: 30%
+  float: left
+    
+.price-value
+  width: 40%
+  float: left
+  font-size: em(62px)
+  line-height: .75
+  font-family: $header-font-family
+  letter-spacing: -3px
+
+    
+.price-currency
+  text-align: right
+  font-size: $h3-font-size
+  line-height: 1
+    
+.price-period
+  text-align: left
+  padding-top: $base-spacing

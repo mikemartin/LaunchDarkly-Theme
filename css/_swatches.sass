@@ -17,9 +17,10 @@ $swatch-colors: $blue, $green, $purple, #7587A8
   @include transition (all 0.2s ease-in-out)
   @include flex(1 .5)
   @include align-self(stretch)
+  
   border-radius: $base-border-radius
   margin: $swatch-gutter
-  padding: 1em 1em 1.5em 1em
+  padding-top: $base-spacing
   background: $swatch-background
   
   @for $i from 1 to 5 
@@ -27,10 +28,7 @@ $swatch-colors: $blue, $green, $purple, #7587A8
       $colors: nth($swatch-colors, $i)
       $tint-colors: tint( saturate( nth($swatch-colors, $i), 10 ), 40 )
       $shade-colors: shade( saturate( nth($swatch-colors, $i), 10 ), 40 )
-      border-left: 2em solid $tint-colors
-      border-right: 2em solid transparentize($shade-colors, .1)
-      border-top: 2em solid transparentize($tint-colors, .1)
-      border-bottom: 2em solid $shade-colors
+      border-bottom: $base-spacing solid $shade-colors
       background: $colors
           
           

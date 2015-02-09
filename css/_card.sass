@@ -1,0 +1,38 @@
+/* CARD LIST */
+.cards .card
+  +media($large-screen)
+    +span-columns(4)
+    +omega(3n) 
+     
+/* CARD */
+.card
+  text-align: center
+    
+.card-title
+  margin-bottom: $half-spacing
+  
+.card-image
+  +outer-container
+  img
+    +span-columns(2 of 4)
+    +shift(1 of 4)
+    border-radius: 50%
+
+.card-body
+  +outer-container
+  
+  p
+    font-size: em(14px)
+    margin-bottom: $base-spacing
+    
+    
+.card-small
+    
+  .card-image
+    +size(74px)
+    
+  p
+    font-size: em(14px)
+    line-height: 1.4
+    margin-top: .5em
+    

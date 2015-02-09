@@ -7,11 +7,4 @@ input[type="submit"] {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  
-  &.button-primary {
-    background: $primary-button-color;
-    &:hover {
-      background: $hover-primary-button-color;
-    }
-  }
 }

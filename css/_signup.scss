@@ -1,0 +1,76 @@
+.form-signup {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $sign-up-border-color: $base-border-color;
+  $sign-up-border: 1px solid $sign-up-border-color;
+  $sign-up-background: lighten($sign-up-border-color, 10%);
+
+  position: relative;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include media($medium-screen) {
+    max-width: 450px;
+  }
+  
+  
+  input[type=email] {
+    @include appearance(none);
+    @include box-sizing(border-box);
+    @include transition(border-color);
+    background-color: white;
+    border-radius: $base-border-radius;
+    border-radius: $base-border-radius;
+    border: 1px solid $base-border-color;
+    display: block;
+    //font-size: 1em;
+    margin: 0;
+    padding: ($base-spacing / 3) ($base-spacing / 3);
+    position: relative;
+    width: 100%;
+    color: $dark-gray;
+    
+    @include media($medium-screen) {
+      font-size: $h3-font-size;
+      font-weight: 300;
+    }
+
+    @include media($mobile) {
+        font-size: $h5-font-size;
+        @include margin(null auto);
+    }
+  }
+
+
+  button[type=submit] {
+    @include position(absolute, 0em 0em 0em null);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    outline: none;
+    height: 2.4em;
+    //padding: 5px 10px;
+
+    img {
+      height: 12px;
+      opacity: 0.7;
+    }
+    
+    @include media($medium-screen) {
+      font-size: $h3-font-size;
+      font-weight: 300;
+    }
+
+    @include media($mobile) {
+        font-size: $h5-font-size;
+        @include margin(null auto);
+        line-height: 0;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<section class="reverse">
+  <div class="container padding">
+    {{ theme:partial src="title" }}
+    <div class="profiles-team">
+      {{ team }}
+        {{ theme:partial src="profile-listing" use_context="true" }}
+      {{ /team }}
+    </div>
+  </div>
+</section>
+
+<section class="careers reverse anchor" id="careers">
+  <div class="container padding">
+   <div class="section-title">
+     <h1>Careers</h1>
+     <p class="lead">{{careers_text}}</p>
+     {{ if careers_button }}
+      <a href="mailto:careers@launchdarkly.com" class="button">{{ careers_button }}</a>
+    {{ endif }}
+   </div> 
+  </div>
+</section>
+
+<section class="container padding">
+  
+  <div class="section-title">
+    <h1>Advisors</h1>
+    <p class="lead">{{advisors_text}}</p>
+  </div>
+  
+  <div class="profiles">
+      {{ advisors }}
+          {{ theme:partial src="profile-listing" compact="true"}}
+      {{ /advisors }}
+    </div>
+</section>
+

@@ -1,0 +1,24 @@
+{{ if email-signup }}
+{{ raven:form formset="sign-up" attr="class:form-signup" }}
+  {{ if {raven:success} }}
+    <div class="flash-success">
+      <h4>Thank you, we'll be in touch!</h4>
+    </div>
+  {{ else }}
+    {{ raven:errors }}
+       {{ invalid }}
+          <div class="flash-error">
+           <h4>{{ message }}</h4>
+          </div>
+       {{ /invalid }}
+    {{ /raven:errors }}
+      <input type="email" name="email" placeholder="Email Address" />
+      <button type="submit" class="button-primary">Sign Up</button>
+  {{ endif }}
+{{ /raven:form }}
+
+{{ else }}
+
+<a href="https://app.launchdarkly.com/signup" class="sign-up button button-primary"><span>Get Started for Free</span></a>
+
+{{ endif }}

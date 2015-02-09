@@ -1,5 +1,5 @@
 $parallax-window-height: 30em;
-$parallax-background-height: $parallax-window-height;
+$parallax-background-height: $parallax-window-height * 2;
 
 .parallax-window {
   max-height: $parallax-window-height;
@@ -10,16 +10,25 @@ $parallax-background-height: $parallax-window-height;
 }
 
 .parallax-static-content {
+  color: #9A9A8A;
+  padding: 8em 0;
   position: relative;
   z-index: 9;
+  padding: 4em 1em; 
+  @include media($medium-screen) {
+     padding: 8em 0; 
+  }
 }
 
 .parallax-background {
-  background: url("../images/mountains.jpg") repeat;
-  background-size: cover;
-  //background-color: beige;
   background-position: top;
-  height: $parallax-background-height;
+  background-size: cover;
+  background-color: $black;
+  height: $parallax-window-height;
+  
+  @include media($medium-screen) {
+    height: $parallax-window-height * 1.25;
+  }
   left: 0;
   position: absolute;
   top: - $parallax-window-height / 3;

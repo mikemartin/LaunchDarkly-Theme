@@ -1,0 +1,56 @@
+//------------------------------------//
+//  $MEDIA
+//------------------------------------//
+
+// Base Object
+.media { @include clearfix; }
+
+.media-item {
+  float: left;
+  margin-right: 1em;
+  
+  img,
+  video,
+  iframe,
+  object { display: block; }
+}
+
+.media-body,
+.media-body > :last-child { margin-bottom: 0; }
+
+
+//
+// EXTENSIONS
+//
+
+// FLIP
+.media--flip > .media-item {
+  float: right;
+  margin-left: $base-spacing;
+  margin-right: 0;
+}
+
+// NOWRAP
+.media--nowrap > .media-body { overflow: hidden; }
+
+// VALIGN
+.media--valign {
+  display: table;
+  width: 100%;
+
+  .media-item,
+  .media-body {
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .media-item {
+    padding-right: $base-spacing;
+
+    img {
+      width: auto !important;
+      max-width: none !important;
+    }
+  }
+}

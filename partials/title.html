@@ -1,0 +1,13 @@
+<div class="section-title">
+  <h1>
+    {{ if page_title }}
+    {{ page_title|smartypants|widont }}
+    {{ else }}
+    {{ title|smartypants|widont }}
+    {{ endif }}
+  </h1>
+
+  {{ if intro }}
+  <p class="lead">{{ intro|striptags }}</p>
+  {{ endif}}
+</div>

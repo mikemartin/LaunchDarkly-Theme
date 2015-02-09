@@ -1,0 +1,42 @@
+<div class="reverse">
+  <section class="container padding">
+    {{ theme:partial src="title" }}
+    
+    <div class="pricing-plans">
+    {{ pricing_content}}
+        {{ if type == "pricing_set" }}
+          {{ theme:partial src="pricing-plan" use_context="true" }}
+        {{ endif }}
+      
+    {{ /pricing_content }}
+    </div>
+  </section>
+  
+  <section class="container padding">
+      {{ pricing_content}}
+      {{ if type == "offer_set" }}
+        <div class="section-title">
+          <h2>{{ title }}</h2>
+          <p class="lead">{{ content }}</p>
+          {{ button }} <a href="{{ link }}" class="button">{{label}}</a> {{/button}}
+        </div>
+      {{ endif }}
+      
+    {{ /pricing_content }}
+  </section>
+</div>
+
+<section class="container padding">
+  {{ theme:partial src="title" title="{{faq_title}}" intro=""}}
+  <ul class="questions">
+  {{ questions }}
+    {{ if type == "question_set" }}
+      <li>
+        <h3>{{ question }}</h3>
+        <p>{{ answer}}</p>
+      </li>
+    {{ endif }}
+    
+  {{ /questions }}
+  </ul>
+</section>

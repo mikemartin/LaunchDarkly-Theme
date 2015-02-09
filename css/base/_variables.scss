@@ -6,12 +6,12 @@ $header-font-family: 'Titillium Web', $helvetica;
 
 // Font Sizes
 $base-font-size: 1em;
-$h1-font-size: $base-font-size * 2;//2.25;
-$h2-font-size: $base-font-size * 2;
-$h3-font-size: $base-font-size * 1.75;
-$h4-font-size: $base-font-size * 1.5;
-$h5-font-size: $base-font-size * 1.25;
-$h6-font-size: $base-font-size;
+$h1-font-size: $base-font-size * 3; //48
+$h2-font-size: $base-font-size * 2; // 30
+$h3-font-size: $base-font-size * 1.5; // 24
+$h4-font-size: $base-font-size * 1.25; // 20
+$h5-font-size: $base-font-size * 1.125; // 18
+$h6-font-size: $base-font-size; // 16
 
 // Line height
 $base-line-height: 1.5;
@@ -21,29 +21,46 @@ $header-line-height: 1.15;
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
+$double-spacing: $base-spacing * 2;
+$half-spacing: $base-spacing / 2;
+
 
 // Colors
 $blue: #21B1C5;
 $green: #50D29D;
 $purple: #8588C9;
-$black: #2C3549;
-$white: #E3EFF9;
+$gray: #7789AC;
 $dark-gray: #45526E;
-$medium-gray: #7587A8;
-$light-gray: #E3EFF9;
-$light-red: #FBE3E4;
+$medium-gray: #B6C8E3;
+$light-gray: #EAF3FB;
+$black: #15233C;
+$white: #FFF;
+
+$light-red: #E88B8B;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 
+
+$primary: #50D29D;
+$primary-light: #3DE7F1;
+$primary-dark: #348866;
+
+$secondary: #21B1C5;
+$secondary-dark: #157380;
+
+
+
+
 // Background Color
-$base-background-color: white;
+$base-background-color: $light-gray;
+
 $subtle-background-color: $light-gray;
 $reverse-background-color: $black;
 $highlight-background-color: $blue;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $purple;
+$base-accent-color: $blue;
 $base-highlight-color: $green;
 
 // Link Colors
@@ -55,11 +72,14 @@ $hover-button-color: $hover-link-color;
 $primary-button-color: $base-highlight-color;
 $hover-primary-button-color: shade( saturate( $base-highlight-color, 10 ), 20 );
 
+$secondary-button-color: $dark-gray;
+$hover-secondary-button-color: shade($dark-gray, 10 );
+
 // Flash Colors
 $alert-color: $light-yellow;
 $error-color: $light-red;
 $notice-color: lighten($base-accent-color, 40);
-$success-color: $light-green;
+$success-color: $green;
 
 // Border color
 $base-border-color: $light-gray;

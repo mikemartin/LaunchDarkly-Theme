@@ -1,0 +1,11 @@
+<div class="article">
+    <p class="date">
+		{{ member:profile member="{ author }" }}{{ first_name }} {{ last_name }}{{/member:profile}} - {{ date }}
+    </p>
+	<h1>
+		{{ if use_context }}<a href="{{ url }}">{{ endif }}{{ title|widont }}{{ if use_context }}</a>{{ endif }}
+	</h1>
+    {{ if image }}<a href="{{ url }}"><img src="{{ image }}" class="article-image"/></a>{{ endif }}
+	<h2>{{ content|striptags|truncate:300 }}
+	<a href="{{ url }}" class="read-more icon-next">Read More</a></h2>
+</div>

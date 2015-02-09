@@ -1,0 +1,52 @@
+// Headline
+.teaser
+    
+  h5
+    text-transform: uppercase
+    font-weight: 300
+    letter-spacing: 2px
+    font-family: $base-font-family
+    color: $purple
+    margin-bottom: .5em
+  
+  h1
+    margin-bottom: .5em
+    line-height: 1  
+  
+  .teaser-content
+    padding-bottom: 2em
+    
+  .teaser-image
+    img
+      max-width: 260px
+  
+  &.teaser--flipped
+    background: $white
+      
+  +media($large-screen-up)
+    .teaser-content
+      +span-columns(8)
+    
+      .teaser-content-inner
+        max-width: 530px
+        margin: 0 auto
+
+    p
+      font-size: $h5-font-size
+        
+    .teaser-image
+      +span-columns(4)
+
+    &.teaser--flipped
+      
+      h4
+        color: $blue
+        
+      +direction-context(right-to-left)
+        .teaser-content
+          +span-columns(8)
+          margin-right: 0
+          
+        .teaser-image
+          +span-columns(4)
+          text-align: right

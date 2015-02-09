@@ -1,0 +1,14 @@
+<section class="teaser {{ switch between="|teaser--flipped"}}">
+  <div class="container padding">
+    <div class="teaser-content">
+      <div class="teaser-content-inner">
+        <h5 class="teaser-label">{{ label }}</h5>
+        <h1>{{ title }}</h1>
+        {{ content|markdown }}
+      </div>
+    </div>
+    <div class="teaser-image">
+      <img src="{{ image }}"/>
+    </div>
+  </div>
+</section>

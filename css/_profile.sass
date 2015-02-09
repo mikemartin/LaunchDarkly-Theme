@@ -1,0 +1,44 @@
+/* PROFILE LIST */
+.profiles
+  +outer-container
+    
+  .profile
+    +media(min-width 560px max-width $large-screen)
+      +span-columns(6)
+      +omega(2n)
+      
+    +media($large-screen)
+      +span-columns(4)
+      +omega(3n) 
+    
+
+.profiles-team
+  .profile
+    +clearfix
+      
+    +media($large-screen)
+      +span-columns(6)
+      +omega(2n)
+ 
+     
+/* PROFILE */
+
+.profile-header
+  margin-bottom: $base-spacing
+  display: block
+    
+.profile-photo
+  border-radius: 50%
+  +size(86px)
+   
+.profile-position
+  color: $primary-light
+  font-size: em(14px)
+  margin-top: .25em
+    
+.profile-body
+  font-size: em(14px)
+
+.layout-dark
+  .profile-position
+    color: $purple

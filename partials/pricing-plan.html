@@ -1,0 +1,32 @@
+<div class="plan box {{ if popular }}plan--highlight{{ endif }}">
+  <header class="plan-header">
+    <div class="plan-label">
+      Most Popular
+    </div>
+    <h5 class="plan-title">{{ name }}</h5>
+    <div class="price">
+      <div class="price-currency">$</div>
+      <div class="price-value">{{ price }}</div>
+      <div class="price-period">/month</div>
+    </div>
+    <a href="https://app.launchdarkly.com/signup" class="button button-primary">Get Started for Free</a>
+  </header>
+  <div class="plan-features">
+    <h5 class="plan-title">Features</h5>
+    <ul>
+    {{ features }}
+      <li>
+        {{ feature }}
+        {{ if more }}
+          <div class="plan-tooltip-item">
+            <div class="tooltip-item">
+              <i class="icon-help"></i>
+              <div class="tooltip">{{ more }}</div>
+            </div>
+          </div>
+        {{ endif }}
+      </li>
+    {{ /features }}
+    </ul>
+  </div>
+</div>

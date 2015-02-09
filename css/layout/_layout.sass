@@ -1,40 +1,52 @@
+//------------------------------------//
+//  $LAYOUT
+//------------------------------------//
+
 body
-  margin: 0
-  -webkit-backface-visibility: hidden
-    
-.wrapper
+  min-width: 320px
+
+.site-wrapper
   +outer-container
-  +pad(1em)
-  
-.wrapper-medium
-  +outer-container($medium-screen)
-  +pad(1em)
-  
-.wrapper-large
-  +outer-container($large-screen)
-  +pad(1em)
 
-.row
+.container
   +outer-container
+  +pad(0 $base-spacing)
+
+  +media($medium-screen)
+    &.narrow
+      width: 80%
+      max-width: 700px
+
+.padding
+  padding-top: $base-spacing
+  padding-bottom: $base-spacing
+
+  +media($medium-screen)
+    padding-top: $double-spacing
+    padding-bottom: $double-spacing
+
+.box
+  +pad($base-spacing)
+  margin-bottom: $base-spacing
+  background: $white
+
+
+.highlight
+  background: $highlight-background-color
+  color: white 
+
+.light
+  background: $white
   
-section
-  padding-bottom: $base-spacing*2
-  margin-bottom: $base-spacing*2
-  border-bottom: 1px solid transparentize($base-font-color, .9)
-    
-section
-  margin-bottom: 0    
-   
-section
-  padding-top: 3em
-  padding-bottom: 3em
+.reverse
+  background: $black
+  color: $light-gray
   
-  .section-title
-    margin-bottom: 1em
-    text-align: center
-
-
-
-
-
-
+  h1, h2, h3, h4
+    color: $white
+  
+  .box
+    background: transparentize($dark-gray, .5)
+      
+  .lead
+    color: $medium-gray  

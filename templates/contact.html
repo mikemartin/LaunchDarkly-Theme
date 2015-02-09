@@ -1,0 +1,79 @@
+  <div class="container padding narrow">
+
+      {{ theme:partial src="title" intro="{content}" }}
+      
+      <div class="split-content">
+        
+        
+         {{ if {raven:success} }}
+			<div class="flash-success">
+              <h4>Thank you, we'll be in touch!</h4>
+              {{ success_message }}
+            </div>
+         {{ else }}
+         
+  			{{ raven:errors }}
+
+  			  {{ if missing }}
+  			  <div class="flash-error">
+  			    <h2>You have missing fields:</h2>
+  			    <ul>
+  			      {{ missing }}
+  			        <li>{{ field }}</li>
+  			      {{ /missing }}
+  			    </ul>
+  			  </div>
+  			  {{ endif }}
+
+  			  {{ if invalid }}
+  			  <div class="flash-error">
+  			    <h2>You have invalid fields</h2>
+  			    <ul>
+  			      {{ invalid }}
+  			        <li>{{ field }}: {{ message }}</li>
+  			      {{ /invalid }}
+  			    </ul>
+  			  </div>
+  			  {{ endif }}
+
+  			{{ /raven:errors }}
+
+  			{{ raven:form formset="contact" attr="class:contact" }}
+              <fieldset>
+  			  <input type="text" name="name" value="" placeholder="First Name" />
+
+  			  <input type="email" name="email" value="" placeholder="Email"/>
+
+  			  <textarea name="message" value="" placeholder="How can we help you?"></textarea>
+
+  			  <input type="submit" value="Send Message" />
+              </fieldset>
+        {{ /raven:form }}
+        {{ endif }}
+      </div>
+      <div class="split-content">        
+      
+        <div class="card-small box media media--nowrap">
+          <div class="media-item">
+            <img class="card-image"  src="/assets/img/educate.png"/>
+          </div>
+          <div class="media-body">
+            <h4>We're here to help!</h4>
+            <p>File a support request and we’ll get back to you as soon as humanly possible.</p>
+            <a href="mailto:support@launchdarkly.com" class="button">Contact Support</a>
+          </div>
+        </div>
+        
+        <div class="card-small box media media--nowrap">
+          <div class="media-item">
+            <img class="card-image" src="/assets/img/docs.png"/>
+          </div>
+          <div class="media-body">
+            <h4>Documentation</h4>
+            <p>Our documentation will help you get started quickly.</p>
+            <a href="/pricing#faq" class="button">Read the Docs</a>
+          </div>
+        </div>
+      </div>
+
+</div>

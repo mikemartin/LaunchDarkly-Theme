@@ -1,11 +1,16 @@
 +media($large-screen)  
   .main-content
     +span-columns(9)
-    padding-right: $base-spacing
+    padding-right: $column
   
   .secondary-content
     +span-columns(3)
+  
+  .split-content
+    +span-columns(6)
+    padding-bottom: $base-spacing
 
 +media(max-width $large-screen)  
   .main-content, .secondary-content
     padding-bottom: $base-spacing
+    
